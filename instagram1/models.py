@@ -19,3 +19,5 @@ class Post(models.Model):
     #     return len(self.massage)
     # massage_length.short_description = "메세지 글자수"
     #
+    class Mata:
+        ordering = ['-id']
