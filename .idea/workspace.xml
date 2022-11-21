@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc02fa9b-195e-4fa8-91d8-6e3c9ebfa372" name="Changes" comment="관계를 표현하는 모델 필드(ForeignKey)">
-      <change afterPath="$PROJECT_DIR$/accounts/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/askcompany/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/askcompany/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/askcompany/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/askcompany/urls.py" afterDir="false" />
+    <list default="true" id="dc02fa9b-195e-4fa8-91d8-6e3c9ebfa372" name="Changes" comment="OneToOneField">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/Untitled-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Untitled.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog1/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog1/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instagram1/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/instagram1/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instagram1/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/instagram1/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instagram1/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/instagram1/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instagram1/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/instagram1/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +91,7 @@
       <workItem from="1666236113839" duration="942000" />
       <workItem from="1666240947168" duration="790000" />
       <workItem from="1666329353111" duration="5823000" />
-      <workItem from="1668992583994" duration="7093000" />
+      <workItem from="1668992583994" duration="16616000" />
     </task>
     <task id="LOCAL-00001" summary="관계를 표현하는 모델 필드(ForeignKey)">
       <created>1668997000858</created>
@@ -95,7 +100,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668997000858</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="OneToOneField">
+      <created>1669008528171</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1669008528171</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,6 +126,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="관계를 표현하는 모델 필드(ForeignKey)" />
-    <option name="LAST_COMMIT_MESSAGE" value="관계를 표현하는 모델 필드(ForeignKey)" />
+    <MESSAGE value="OneToOneField" />
+    <option name="LAST_COMMIT_MESSAGE" value="OneToOneField" />
   </component>
 </project>

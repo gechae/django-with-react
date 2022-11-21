@@ -1,5 +1,9 @@
+from django.http import HttpResponse, HttpRequest
 from django.shortcuts import render
 from .models import Post
+from django.views.generic import ListView
+
+# post_list = ListView.as_view(model=Post)
 
 def post_list(request):
     qs = Post.objects.all()
@@ -13,3 +17,5 @@ def post_list(request):
         'q': q,
     })
 
+def post_detail(request:HttpRequest, url_captured_values:int) -> HttpResponse:
+    pass
