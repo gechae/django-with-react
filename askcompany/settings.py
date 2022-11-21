@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # third apps
+    'debug_toolbar',
+    # locals apps
     'blog1',
     'instagram1',
 ]
@@ -49,6 +52,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # third apps
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
 
 ROOT_URLCONF = 'askcompany.urls'
@@ -129,3 +134,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# django-debug-toolbar
+INTERNAL_IPS = [
+    "127.0.0.1",
+]
+
+# 프로젝트 만들때 마다 설정하자
+# AUTH_USER_MODEL = 'auth.User'
