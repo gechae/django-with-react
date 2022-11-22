@@ -17,5 +17,15 @@ def post_list(request):
         'q': q,
     })
 
+
 def post_detail(request:HttpRequest, url_captured_values:int) -> HttpResponse:
-    pass
+    response = HttpResponse()
+    response.write("Hello World")
+    response.write("Hello World")
+    response.write("Hello World")
+    return response
+
+
+# 무조건 2번째 파라미터는 이름이 맞아야한다.
+def archives_year(request, year):
+    return HttpResponse(f"{year}년 archives")
