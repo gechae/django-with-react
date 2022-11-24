@@ -7,7 +7,7 @@ class Post(models.Model):
     # 제일 안정하고 확실한 장고 User모델을 설정하는 방법
     author = models.ForeignKey(to=settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     massage = models.TextField()
-    photo = models.ImageField(blank=True, upload_to='instagram/post/%Y/%m/%d')
+    photo = models.ImageField(blank=True, upload_to='instagram1S/post/%Y/%m/%d')
     # blank 의미가 있다. 태그 지정 안 할 수 있음
     tag_set = models.ManyToManyField('Tag', blank=True)
     is_public = models.BooleanField(default=False, verbose_name="공개여부")
