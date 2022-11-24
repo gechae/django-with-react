@@ -20,9 +20,9 @@ register_converter(YearConverter, 'year')
 app_name = 'instagram1'
 
 urlpatterns = [
-    path('', views.post_list),
+    path('', views.post_list, name='post_list'),
     # Converter 라고 한다.
-    path('<int:pk>/', views.post_detail, name='post_list'),
+    path('<int:pk>/', views.post_detail, name='post_detail'),
     #path('archives/<int:year>/', views.archives_year),
     #re_path(r'archives/(?P<year>\d{4})/', views.archives_year)
     path('archives/<year:year>/', views.archives_year),

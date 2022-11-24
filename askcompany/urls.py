@@ -20,12 +20,22 @@ from django.urls import path, include
 # from django.conf import global_settings
 # from askcompany import settings
 from django.conf import settings
+from django.views.generic import TemplateView, RedirectView
 
+
+class RootView(TemplateView):
+    template_name = 'root.html'
 # api_v1_patterns = [
 #     # path(...)
 # ]
 urlpatterns = [
     #path('api/v1/', include(api_v1_patterns)),
+    #path('', TemplateView.as_view(template_name='root.html'), name='root'),
+    #path('', RootView.as_view(), name='root'),
+    path('', RedirectView.as_view(
+        # url='/instagram1'
+        pattern_name='instagram1:post_list', # URL Reverse 선호
+    ), name='root'),
     path('admin/', admin.site.urls),
     path('accounts/', include('accounts.urls')),
     path('blog1/', include('blog1.urls')),
