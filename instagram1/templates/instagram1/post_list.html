@@ -29,7 +29,12 @@
                      {% endif %}
                  </td>
                  <td>
-                     {{ post.massage }}
+                    {# <a href="{% url 'instagram1:post_detail' post.pk %}"> #}
+                    {# {{ post.massage }} #}
+                    {# </a> #}
+                     <a href="{{ post.get_absolute_url }}">
+                         {{ post.massage }}
+                     </a>
                  </td>
              </tr>
              {% endfor %}

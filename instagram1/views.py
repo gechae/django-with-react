@@ -4,7 +4,7 @@ from django.shortcuts import get_object_or_404, render
 from django.utils.decorators import method_decorator
 
 from .models import Post
-from django.views.generic import ListView, DetailView, ArchiveIndexView, YearArchiveView, TodayArchiveView
+from django.views.generic import ListView, DetailView, ArchiveIndexView, YearArchiveView, TodayArchiveView, CreateView, DeleteView, UpdateView
 
 
 # post_list = login_required(ListView.as_view(model=Post, paginate_by=10))

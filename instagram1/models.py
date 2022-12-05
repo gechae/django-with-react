@@ -1,5 +1,8 @@
 from django.db import models
 from django.conf import settings
+from django.urls import reverse
+
+
 # Create your models here.
 
 
@@ -23,6 +26,12 @@ class Post(models.Model):
     #     return len(self.massage)
     # massage_length.short_description = "메세지 글자수"
     #
+
+    # url reverse
+    # Detail_view 구현시 반드시 적용하기 (편함)
+    def get_absolute_url(self):
+        return reverse('instagram1:post_detail', args=[self.pk])
+
     class Mata:
         ordering = ['-id']
 
