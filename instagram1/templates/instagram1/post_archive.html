@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2> latest </h2>
+        {{ latest }}
+    <h2> date_list </h2>
+        {{ date_list }}
+    {% for date in date_list %}
+        {# django Template 문법에서 filter 함수 | date(값)|date:""(값)       #}
+        {# {{ date|date:"Y" }}#}
+        {{ date.year}}
+    {% endfor %}
+</body>
+</html>

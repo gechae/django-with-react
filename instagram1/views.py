@@ -4,7 +4,8 @@ from django.shortcuts import get_object_or_404, render
 from django.utils.decorators import method_decorator
 
 from .models import Post
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, ArchiveIndexView, YearArchiveView, TodayArchiveView
+
 
 # post_list = login_required(ListView.as_view(model=Post, paginate_by=10))
 @method_decorator(login_required, name='dispatch')
@@ -57,5 +58,8 @@ class PostDetailView(DetailView):
         return qs
 
 # 무조건 2번째 파라미터는 이름이 맞아야한다.
-def archives_year(request, year):
-    return HttpResponse(f"{year}년 archives")
+# def archives_year(request, year):
+#     return HttpResponse(f"{year}년 archives")
+post_archive = ArchiveIndexView.as_view(model=Post, date_field='created_at', paginate_by=10)
+post_archive_year = YearArchiveView.as_view(model=Post, date_field='created_at', make_object_list=True)
+# post_archive_today = TodayArchiveView.as_view(model=Post, date_field='created_at')
