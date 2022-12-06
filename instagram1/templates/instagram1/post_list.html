@@ -1,15 +1,12 @@
 {# python import와 동일 #}
+{% extends "instagram1/layout.html" %}
 {% load bootstrap4 %}
 
-<!doctype html>
-<html lang="ko">
-<head>
-    <meta charset="utf-8" />
-    <title>instagram / Post List</title>
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-</head>
-<body>
+{% block title %}
+    instagram / Post List
+{% endblock title %}
+
+{% block content %}
     <form action="" method="get">
         <input type="text" name="q" value="{{ q }}"/>
         <input type="submit" value="검색" />
@@ -49,5 +46,4 @@
         {% bootstrap_pagination page_obj size='large' justify_content='center' %}
         {# {% bootstrap_pagination page_obj size='small' %}#}
     {% endif %}
-</body>
-</html>
+{% endblock content %}

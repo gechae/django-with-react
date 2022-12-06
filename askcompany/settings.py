@@ -25,7 +25,10 @@ SECRET_KEY = 'django-insecure-#ytf_^xoalufz0mmkk&((*+givk7&!-mmjeomb^^)077j_vj3c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '6b15-61-105-178-84.jp.ngrok.io',
+    '127.0.0.1'
+]
 
 
 # Application definition
@@ -147,3 +150,5 @@ INTERNAL_IPS = [
 
 # 프로젝트 만들때 마다 설정하자
 # AUTH_USER_MODEL = 'auth.User'
+
+CSRF_TRUSTED_ORIGINS = ['https://6b15-61-105-178-84.jp.ngrok.io']
