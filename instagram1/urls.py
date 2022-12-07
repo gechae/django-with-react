@@ -11,7 +11,10 @@ register_converter(DayConverter, 'day')
 app_name = 'instagram1'
 
 urlpatterns = [
+    path('new/', views.post_new, name='post_new'),
+
     path('', views.post_list, name='post_list'),
+
     # Converter 라고 한다.
     path('<int:pk>/', views.post_detail, name='post_detail'),
     #path('archives/<int:year>/', views.archives_year),
