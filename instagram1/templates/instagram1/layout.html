@@ -1,5 +1,5 @@
 {# python import와 동일 #}
-{% load static %}
+{% load bootstrap4 static %}
 
 <!doctype html>
 <html lang="ko">
@@ -52,11 +52,23 @@
   </div>
 </nav>
 
+
+
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            {% block content %}
+            {% bootstrap_messages %}
+{#            {% if messages %}#}
+{#                <div class="messages">#}
+{#                    {% for message in messages %}#}
+{#                        <div class="alert alert-{{ message.tags }}">#}
+{#                            {{ message.message }}#}
+{#                        </div>#}
+{#                    {% endfor %}#}
+{#                </div>#}
+{#            {% endif %}#}
 
+            {% block content %}
             {% endblock content %}
             <br/>
             &copy; C.L.S

@@ -10,41 +10,45 @@ from django.views.generic import ListView, DetailView, ArchiveIndexView, YearArc
 
 
 @login_required
-def post_new(requset):
-    if requset.method == 'POST':
-        form = PostForm(requset.POST, requset.FILES)
+def post_new(request):
+    if request.method == 'POST':
+        form = PostForm(request.POST, request.FILES)
         if form.is_valid():
             # model.get_absolute_url() 호출
             post = form.save(commit=False)
-            post.author = requset.user # 현재 로그인 user instance
+            post.author = request.user # 현재 로그인 user instance
             post.save()
+            messages.info(request, "포스팅을 저장 했습니다.")
             return redirect(post)
     else:
         form = PostForm()
 
-    return render(requset, 'instagram1/post_form.html', {
+    return render(request, 'instagram1/post_form.html', {
         'form': form,
+        'post': None,
     })
 
 @login_required
-def post_edit(requset, pk):
+def post_edit(request, pk):
     post = get_object_or_404(Post, pk=pk)
 
     # 작성자 check tip
-    if post.author != requset.user:
-        messages.error(requset, '작성자만 수정할 수 있습니다.')
+    if post.author != request.user:
+        messages.error(request, '작성자만 수정할 수 있습니다.')
         return redirect(post)
 
-    if requset.method == 'POST':
-        form = PostForm(requset.POST, requset.FILES, instance=post)
+    if request.method == 'POST':
+        form = PostForm(request.POST, request.FILES, instance=post)
         if form.is_valid():
             post = form.save()
+            messages.info(request, "포스팅을 수정 했습니다.")
             return redirect(post)
     else:
         form = PostForm(instance=post)
 
-    return render(requset, 'instagram1/post_form.html', {
+    return render(request, 'instagram1/post_form.html', {
         'form': form,
+        'post': post,
     })
 
 # post_list = login_required(ListView.as_view(model=Post, paginate_by=10))
@@ -58,7 +62,6 @@ class PostListView(ListView):
     #     pass
 
 post_list = PostListView.as_view()
-
 # @login_required
 # def post_list(request):
 #     qs = Post.objects.all()
