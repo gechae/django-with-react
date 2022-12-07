@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc02fa9b-195e-4fa8-91d8-6e3c9ebfa372" name="Changes" comment="Form Validation">
+    <list default="true" id="dc02fa9b-195e-4fa8-91d8-6e3c9ebfa372" name="Changes" comment="Messages Framework">
+      <change afterPath="$PROJECT_DIR$/instagram1/templates/instagram1/post_confirm_delete.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/askcompany/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/askcompany/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/instagram1/templates/instagram1/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/instagram1/templates/instagram1/layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/instagram1/templates/instagram1/post_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/instagram1/templates/instagram1/post_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instagram1/templates/instagram1/post_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/instagram1/templates/instagram1/post_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instagram1/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/instagram1/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/instagram1/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/instagram1/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -172,7 +172,7 @@
       <workItem from="1669946054376" duration="1869000" />
       <workItem from="1670200950483" duration="21346000" />
       <workItem from="1670232060048" duration="8396000" />
-      <workItem from="1670303613946" duration="26170000" />
+      <workItem from="1670303613946" duration="26948000" />
     </task>
     <task id="LOCAL-00001" summary="관계를 표현하는 모델 필드(ForeignKey)">
       <created>1668997000858</created>
@@ -279,7 +279,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670399123900</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Messages Framework">
+      <created>1670401234087</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1670401234087</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -311,7 +318,8 @@
     <MESSAGE value="dJango Form" />
     <MESSAGE value="ModelForm" />
     <MESSAGE value="Form Validation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Form Validation" />
+    <MESSAGE value="Messages Framework" />
+    <option name="LAST_COMMIT_MESSAGE" value="Messages Framework" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -100,6 +100,17 @@ class PostDetailView(DetailView):
             qs = qs.filter(is_public=True)
         return qs
 
+@login_required
+def post_delete(request, pk):
+    post = get_object_or_404(Post, pk=pk)
+    if request.method == 'POST':
+        post.delete()
+        messages.success(request, '포스팅을 삭제했습니다.')
+        return redirect('instagram1:post_list')
+    return render(request, 'instagram1/post_confirm_delete.html', {
+        'post': post,
+    })
+
 # 무조건 2번째 파라미터는 이름이 맞아야한다.
 # def archives_year(request, year):
 #     return HttpResponse(f"{year}년 archives")

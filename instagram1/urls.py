@@ -18,6 +18,7 @@ urlpatterns = [
     # Converter 라고 한다.
     path('<int:pk>/', views.post_detail, name='post_detail'),
     path('<int:pk>/edit', views.post_edit, name='post_edit'),
+    path('<int:pk>/delete', views.post_delete, name='post_delete'),
     #path('archives/<int:year>/', views.archives_year),
     #re_path(r'archives/(?P<year>\d{4})/', views.archives_year)
 
