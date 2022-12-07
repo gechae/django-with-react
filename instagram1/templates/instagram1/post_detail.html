@@ -14,10 +14,15 @@
         </div>
     {% endif %}
 
-    {{ post.massage }}
+    {#  linebreaks : p tag로 씌운다.  #}
+    {{ post.massage|linebreaks }}
     <hr/>
     <a href="{% url 'instagram1:post_list' %}" class="btn btn-primary">
         목록
+    </a>
+
+    <a href="{% url 'instagram1:post_edit' post.pk %}" class="btn btn-info">
+        수정
     </a>
 {% endblock content %}
 

@@ -1,3 +1,4 @@
+from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, HttpRequest, Http404
 from django.shortcuts import get_object_or_404, render, redirect
@@ -8,14 +9,39 @@ from .models import Post
 from django.views.generic import ListView, DetailView, ArchiveIndexView, YearArchiveView, TodayArchiveView, CreateView, DeleteView, UpdateView
 
 
+@login_required
 def post_new(requset):
     if requset.method == 'POST':
-        form = PostForm(requset.POST)
+        form = PostForm(requset.POST, requset.FILES)
+        if form.is_valid():
+            # model.get_absolute_url() 호출
+            post = form.save(commit=False)
+            post.author = requset.user # 현재 로그인 user instance
+            post.save()
+            return redirect(post)
+    else:
+        form = PostForm()
+
+    return render(requset, 'instagram1/post_form.html', {
+        'form': form,
+    })
+
+@login_required
+def post_edit(requset, pk):
+    post = get_object_or_404(Post, pk=pk)
+
+    # 작성자 check tip
+    if post.author != requset.user:
+        messages.error(requset, '작성자만 수정할 수 있습니다.')
+        return redirect(post)
+
+    if requset.method == 'POST':
+        form = PostForm(requset.POST, requset.FILES, instance=post)
         if form.is_valid():
             post = form.save()
             return redirect(post)
     else:
-        form = PostForm()
+        form = PostForm(instance=post)
 
     return render(requset, 'instagram1/post_form.html', {
         'form': form,
