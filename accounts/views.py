@@ -67,7 +67,3 @@ class SingupView(CreateView):
         auth_login(self.request, user)
         return response
 singup = SingupView.as_view()
-
-def logout(request):
-    pass
-

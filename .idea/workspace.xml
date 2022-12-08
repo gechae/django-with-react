@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc02fa9b-195e-4fa8-91d8-6e3c9ebfa372" name="Changes" comment="회원가입">
+    <list default="true" id="dc02fa9b-195e-4fa8-91d8-6e3c9ebfa372" name="Changes" comment="회원가입하자마자 로그인하기">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/askcompany/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/askcompany/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/askcompany/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/askcompany/templates/layout.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,7 +176,7 @@
       <workItem from="1670476253614" duration="5208000" />
       <workItem from="1670482147196" duration="382000" />
       <workItem from="1670482542438" duration="1187000" />
-      <workItem from="1670483745292" duration="1476000" />
+      <workItem from="1670483745292" duration="2727000" />
     </task>
     <task id="LOCAL-00001" summary="관계를 표현하는 모델 필드(ForeignKey)">
       <created>1668997000858</created>
@@ -344,7 +346,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670483749187</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="회원가입하자마자 로그인하기">
+      <created>1670485247319</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1670485247319</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -384,7 +393,8 @@
     <MESSAGE value="템플릿 레이아웃에 링크 추가하기" />
     <MESSAGE value="퀴즈를 맞춰야 로그인" />
     <MESSAGE value="회원가입" />
-    <option name="LAST_COMMIT_MESSAGE" value="회원가입" />
+    <MESSAGE value="회원가입하자마자 로그인하기" />
+    <option name="LAST_COMMIT_MESSAGE" value="회원가입하자마자 로그인하기" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
