@@ -4,7 +4,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render, redirect
 from django.views.generic import TemplateView, UpdateView, CreateView
-from django.contrib.auth import get_user_model
+from django.contrib.auth import get_user_model, login as auth_login
 
 from accounts.form import ProfileForm
 from accounts.models import Profile
@@ -49,14 +49,24 @@ def profile_edit(request):
     })
 
 
-singup = CreateView.as_view(
-    model=User,
-    form_class=UserCreationForm,
-    success_url=settings.LOGIN_URL,
-    template_name='accounts/singup_form.html',
-)
-# def singup(request):
-#     pass
+# singup = CreateView.as_view(
+#     model=User,
+#     form_class=UserCreationForm,
+#     success_url=settings.LOGIN_URL,
+#     template_name='accounts/singup_form.html',
+# )
+class SingupView(CreateView):
+    model = User
+    form_class = UserCreationForm
+    success_url = settings.LOGIN_REDIRECT_URL
+    template_name = 'accounts/singup_form.html'
+
+    def form_valid(self, form):
+        response = super().form_valid(form)
+        user = self.object
+        auth_login(self.request, user)
+        return response
+singup = SingupView.as_view()
 
 def logout(request):
     pass
