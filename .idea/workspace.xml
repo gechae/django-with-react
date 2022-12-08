@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc02fa9b-195e-4fa8-91d8-6e3c9ebfa372" name="Changes" comment="템플릿 레이아웃에 링크 추가하기">
+    <list default="true" id="dc02fa9b-195e-4fa8-91d8-6e3c9ebfa372" name="Changes" comment="퀴즈를 맞춰야 로그인">
+      <change afterPath="$PROJECT_DIR$/accounts/templates/accounts/singup_form.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/form.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/form.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/templates/accounts/profile_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/accounts/profile_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -37,20 +37,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/emforce/Desktop/py_workspace/django-with-react",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/emforce/Desktop/py_workspace/django-with-react&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/accounts/templates/accounts" />
@@ -173,7 +173,8 @@
       <workItem from="1670232060048" duration="8396000" />
       <workItem from="1670303613946" duration="32124000" />
       <workItem from="1670476253614" duration="5208000" />
-      <workItem from="1670482147196" duration="321000" />
+      <workItem from="1670482147196" duration="382000" />
+      <workItem from="1670482542438" duration="1090000" />
     </task>
     <task id="LOCAL-00001" summary="관계를 표현하는 모델 필드(ForeignKey)">
       <created>1668997000858</created>
@@ -322,7 +323,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670482033024</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="퀴즈를 맞춰야 로그인">
+      <created>1670482503611</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1670482503611</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -360,7 +368,8 @@
     <MESSAGE value="로그인 처리" />
     <MESSAGE value="사용자 프로필 페이지 및 프로필 수정" />
     <MESSAGE value="템플릿 레이아웃에 링크 추가하기" />
-    <option name="LAST_COMMIT_MESSAGE" value="템플릿 레이아웃에 링크 추가하기" />
+    <MESSAGE value="퀴즈를 맞춰야 로그인" />
+    <option name="LAST_COMMIT_MESSAGE" value="퀴즈를 맞춰야 로그인" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
